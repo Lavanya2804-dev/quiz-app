@@ -11,9 +11,10 @@ Students can practice with multiple choice questions, timers, and instant scorin
 - (Optional) Fetch questions from Open Trivia DB API
 
 ## 🌐 Live Demo
-👉 [Your GitHub Pages Link Here](https://your-username.github.io/quiz-app/)
+👉 [GitHub Pages Link Here](https://github.com/Lavanya2804-dev/quiz-app?tab=readme-ov-file#)
 
 ## 🛠️ Tech Stack
 - HTML
 - CSS
 - JavaScript
+
