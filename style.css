@@ -1,0 +1,142 @@
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+#dark-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.screen {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 400px;
+  animation: fadeIn 0.5s;
+}
+
+body.dark .screen {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+select, input, button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button {
+  background: #667eea;
+  color: #fff;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #4957c5;
+}
+
+.options {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.option-btn {
+  background: #f3f3f3;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #ddd;
+}
+
+.option-btn:hover {
+  background: #ddd;
+}
+
+.option-btn.correct {
+  background: #28a745 !important;
+  color: #fff;
+}
+
+.option-btn.wrong {
+  background: #dc3545 !important;
+  color: #fff;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress {
+  margin: 10px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0;
+  background: #667eea;
+  transition: width 0.3s;
+}
+
+#leaderboard {
+  text-align: left;
+  padding: 0;
+  list-style: none;
+}
+
+#leaderboard li {
+  background: #f1f1f1;
+  padding: 6px;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

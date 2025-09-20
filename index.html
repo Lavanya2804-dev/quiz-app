@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button id="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+
+  <!-- Start Screen -->
+  <div id="start-screen" class="screen">
+    <h1>QuizMaster Pro</h1>
+    <p>🎯 Sharpen your mind with instant quizzes!</p>
+
+    <label>Enter Your Name:</label>
+    <input type="text" id="player-name" placeholder="Your name">
+
+    <label>Choose Category:</label>
+    <select id="category">
+      <option value="9">General Knowledge</option>
+      <option value="18">Computer Science</option>
+      <option value="23">History</option>
+      <option value="17">Science & Nature</option>
+    </select>
+
+    <label>Difficulty:</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <button onclick="startQuiz()">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-screen" class="screen hidden">
+    <div class="quiz-header">
+      <h2 id="question-text">Question</h2>
+      <span id="timer">⏱ 15</span>
+    </div>
+    <div class="progress">
+      <span id="progress-text">1 / 5</span>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+    </div>
+    <div id="options" class="options"></div>
+    <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="result-screen" class="screen hidden">
+    <h2>🎉 Quiz Completed!</h2>
+    <p id="final-score"></p>
+    <p id="score-details"></p>
+    <button onclick="restartQuiz()">Restart</button>
+    <button onclick="goHome()">Home</button>
+
+    <h3>🏆 Leaderboard</h3>
+    <ul id="leaderboard"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
